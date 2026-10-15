@@ -1,58 +1,79 @@
-// Variables: pines
-const int ROJO = 13;
-const int AMARILLO = 12;
-const int VERDE = 11;
-const int BOTON = 2;
+#include <Servo.h>
 
-// Variables: tiempos en segundos
-int tiempoVerde = 6;
-int tiempoVerdeCorto = 2;
-int tiempoRojo = 5;
-bool peatonSolicitado = false;
+Servo barrera;
+
+// Variables: pines
+const int TRIG = 9;
+const int ECHO = 10;
+const int PIN_SERVO = 6;
+const int LED_VERDE = 4;
+const int LED_ROJO = 3;
+
+// Variables configurables
+int distanciaDeteccion = 20;   // cm
+int anguloCerrada = 0;
+int anguloAbierta = 90;
+int tiempoSeguridad = 3000;    // ms que espera antes de cerrar
+int anguloActual = 0;
 
 void setup() {
-  pinMode(ROJO, OUTPUT);
-  pinMode(AMARILLO, OUTPUT);
-  pinMode(VERDE, OUTPUT);
-  pinMode(BOTON, INPUT_PULLUP); // presionado = LOW
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  pinMode(LED_VERDE, OUTPUT);
+  pinMode(LED_ROJO, OUTPUT);
+  barrera.attach(PIN_SERVO);
+  barrera.write(anguloCerrada);
+  digitalWrite(LED_ROJO, HIGH);
+  Serial.begin(9600);
 }
 
-// Bucle for: espera revisando el botón cada 100 ms
-void esperar(int segundos) {
-  for (int i = 0; i < segundos * 10; i++) {
-    if (digitalRead(BOTON) == LOW) {   // Condicional
-      peatonSolicitado = true;
+// Mide la distancia en cm
+long medirDistancia() {
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+  long duracion = pulseIn(ECHO, HIGH, 30000);
+  if (duracion == 0) return 999;      // Condicional: sin lectura
+  return duracion * 0.034 / 2;
+}
+
+// Bucle for: mueve el servo grado a grado (movimiento suave)
+void moverBarrera(int destino) {
+  if (destino > anguloActual) {
+    for (int a = anguloActual; a <= destino; a++) {
+      barrera.write(a);
+      delay(15);
     }
-    delay(100);
+  } else {
+    for (int a = anguloActual; a >= destino; a--) {
+      barrera.write(a);
+      delay(15);
+    }
   }
-}
-
-void apagarTodo() {
-  digitalWrite(ROJO, LOW);
-  digitalWrite(AMARILLO, LOW);
-  digitalWrite(VERDE, LOW);
+  anguloActual = destino;
 }
 
 void loop() {
-  // VERDE
-  apagarTodo();
-  digitalWrite(VERDE, HIGH);
-  esperar(tiempoVerdeCorto);            // tiempo mínimo
-  if (!peatonSolicitado) {              // Condicional
-    esperar(tiempoVerde - tiempoVerdeCorto);
+  long distancia = medirDistancia();
+  Serial.println(distancia);
+
+  if (distancia < distanciaDeteccion) {      // Condicional: hay vehículo
+    digitalWrite(LED_ROJO, LOW);
+    digitalWrite(LED_VERDE, HIGH);
+    moverBarrera(anguloAbierta);
+
+    // Bucle while: espera mientras el vehículo siga presente
+    while (medirDistancia() < distanciaDeteccion) {
+      delay(200);
+    }
+
+    delay(tiempoSeguridad);                  // tiempo para que termine de pasar
+    moverBarrera(anguloCerrada);
+    digitalWrite(LED_VERDE, LOW);
+    digitalWrite(LED_ROJO, HIGH);
   }
 
-  // AMARILLO parpadeando 3 veces (bucle for)
-  apagarTodo();
-  for (int i = 0; i < 3; i++) {
-    digitalWrite(AMARILLO, HIGH);
-    delay(400);
-    digitalWrite(AMARILLO, LOW);
-    delay(400);
-  }
-
-  // ROJO
-  digitalWrite(ROJO, HIGH);
-  peatonSolicitado = false;
-  delay(tiempoRojo * 1000);
-}
+  delay(100);
+}   
