@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="aVsLmCq8z2keYSDPj78g">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-5" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="INICIO" vertex="1">
+          <mxGeometry height="80" width="80" x="360" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-7" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="TOCAR BOTON" vertex="1">
+          <mxGeometry height="80" width="80" x="360" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-10" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-20" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SE ENCIENDE EL PIN VERDE" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-12" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="LUEGO DE 5 SEGUNDOS ESTE SE PRENDE" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-14" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="LUEGO SIGUE EL PIN AMARILLO QUE ESTE SE ENCIENDE" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-16" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-13" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="TAMBIEN DESPUES DE 5 SEGUNDOIS" vertex="1">
+          <mxGeometry height="60" width="120" x="320" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-18" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;rounded=0;" value="PIN ROJO, SE ENCIENDE DENTRO" vertex="1">
+          <mxGeometry height="80" width="80" x="550" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-26" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-17" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="ESTE UTILIZA 5 SEGUNDOS COMO LOS OTROS" vertex="1">
+          <mxGeometry height="60" width="120" x="690" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-24" edge="1" parent="1" source="r-ioeCp3eyI2J1D0Oz0X-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="r-ioeCp3eyI2J1D0Oz0X-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="SE CONECTA A LAS RESISTENCIAS" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="MEDIANTE LOS CABLES" vertex="1">
+          <mxGeometry height="60" width="120" x="720" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r-ioeCp3eyI2J1D0Oz0X-25" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="FIN DEL CICLO" vertex="1">
+          <mxGeometry height="60" width="120" x="690" y="650" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
