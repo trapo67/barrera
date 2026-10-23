@@ -31,3 +31,8 @@ Link Wokwi: (pegar acá)
 3. Como peatón, quiero presionar un botón para solicitar cruzar la calle.
 4. Como peatón, quiero que el semáforo se ponga en rojo luego de mi solicitud para cruzar seguro.
 5. Como administrador, quiero cambiar los tiempos de cada luz para adaptarlos al tránsito.
+ 
+
+ precio del producto: 20.000
+ resistencia: 3000
+ leds: 500
